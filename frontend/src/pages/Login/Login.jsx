@@ -19,11 +19,7 @@ function Login() {
   const navigate = useNavigate();
 
   const onSubmit = async (data) => {
-    const res = await login(data);
-
-    const info = await getMyInfo();
-
-    if (info.status === 200 || res.status === 200) navigate('/dashboard');
+    navigate("/dashboard")
   };
 
   useEffect(() => {
